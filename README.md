@@ -1,4 +1,5 @@
-# Homelab Infrastructure
+# My Homelab Setup
+This repo contains details of my homelab including network diagrams, services, features, and everything else. This is a work in progress and I still have a lot to update and work on. 
 ## Stack
 - Proxmox VE
 - pfSense
