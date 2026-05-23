@@ -11,7 +11,6 @@ This repo contains details of my homelab including network diagrams, services, f
 - Samba
 - Linux VMs & LXC containers
 ## Features
-- VLAN segmentation
 - Reverse proxying
 - HTTPS access
 - DNS filtering
