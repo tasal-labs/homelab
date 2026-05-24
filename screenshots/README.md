@@ -1,6 +1,6 @@
 ## Infrastructure Screenshots
 ### Proxmox
-![Proxmox DC](screenshots/proxmox-datacenter-view.png)
+![Proxmox DC](/screenshots/proxmox-datacenter-view.png)
 ![Proxmox Node](screenshots/proxmox-node-view.png)
 ### Pi-hole
 ![Pi-hole](screenshots/pihole-dashboard.png)
