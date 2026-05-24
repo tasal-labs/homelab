@@ -3,25 +3,20 @@ This repo contains details of my homelab including network diagrams, services, a
 ## Stack
 - Proxmox VE
 - pfSense
-- Nginx
-- Cloudflare
+- Pi-hole
+- Nginx Proxy Manager
+- Linux VMs & LXC containers
+- Cloudflare-managed domains
+## Services
 - Nextcloud
 - Vaultwarden
-- Pi-hole
 - Samba
-- Linux VMs & LXC containers
+- Pi-hole
 ## Features
-- Reverse proxying
-- HTTPS access
-- DNS filtering
-- Self-hosted services
-- Remote access
-- Backup management
-## Goals
-- Infrastructure learning
-- Network Experimentation
-- Virtualisation
-- Self-hosting
-- Automation
+- Internal DNS filtering and hostname resolution
+- Reverse proxy routing with HTTPS
+- Mesh wireless networking
+- Virtualised infrastructure using Proxmox
+- Linux-based service management and monitoring
 ## Network Topology & Service Access Flow
-![Physical Topology & Traffic Flow](diagrams/network-topology-and-service-access-flow.png)
+(diagrams/network-topology-and-service-access-flow.png)
