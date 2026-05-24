@@ -23,5 +23,5 @@ This repo contains details of my homelab including network diagrams, services, f
 - Virtualisation
 - Self-hosting
 - Automation
-## Physical Topology & Traffic Flow
+## Network Topology & Service Access Flow
 ![Physical Topology & Traffic Flow](diagram/network-and-traffic-flow-diagram.png)
