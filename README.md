@@ -19,4 +19,3 @@ This repo contains details of my homelab including network diagrams, services, a
 - Virtualised infrastructure using Proxmox
 - Linux-based service management and monitoring
 ## Network Topology & Service Access Flow
-![Network Topology & Service Access Flow](diagrams/network-and-traffc-flow-diagram.png)
