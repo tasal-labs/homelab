@@ -11,6 +11,7 @@ This lab is separated from the primary home network using a dedicated pfSense VM
 - Active Directory
 - DNS
 - DHCP
+
 ## Objectives
 - Configure virtual networking within Proxmox
 - Create an isolated subnet using pfSense
