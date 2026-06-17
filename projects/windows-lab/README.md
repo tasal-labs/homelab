@@ -1,4 +1,4 @@
-# Virtualised Windows LAN
+# Virtualised Windows Lab
 ## Overview
 This project documents the creation of an isolated Windows lab hosted within Proxmox. The goal is to build a fully virtualised network environment from scratch. 
 
