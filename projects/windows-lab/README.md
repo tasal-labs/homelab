@@ -100,13 +100,14 @@ Shared Resource
 * DNS
 * DHCP
 * SMB File Sharing
+* User and Group Management
 
 ### pfSense
 
 * Routing
 * NAT
 * Firewall
-* Internet Connectivity
+* Internet gateway for the lab environment
 
 ---
 
