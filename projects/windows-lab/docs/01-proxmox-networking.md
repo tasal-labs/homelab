@@ -1,3 +1,4 @@
+# Proxmox Networking
 ## Goal
 
 Create an isolated virtual network for enterprise services.
