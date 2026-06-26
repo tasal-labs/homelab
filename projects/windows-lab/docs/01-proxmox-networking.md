@@ -17,7 +17,7 @@ vmbr2
 
 ## Why?
 
-vmbr2 acts as a virtual Layer 2 switch, allowing communication between pfSense, the Domain Controller and Windows client without exposing the lab directly to the home network.
+vmbr2 acts as a virtual Layer 2 switch, allowing communication between pfSense, the Domain Controller and Windows client without exposing the lab directly to the home network and internet.
 
 ## Verification
 
