@@ -39,7 +39,13 @@ The project covers the complete deployment of a small Windows domain, from confi
 
 ## Network Architecture
 
-The lab uses a dedicated pfSense virtual firewall to isolate the Windows environment from the home network using double NAT.
+The lab is hosted on Proxmox VE and isolated from the home network using a dedicated pfSense virtual firewall.
+
+The pfSense WAN interface connects to the home LAN (10.27.27.0/24), while the LAN interface provides an isolated subnet (192.168.10.0/26). Windows Server acts as the Domain Controller, providing Active Directory, DNS and DHCP services, while a Windows 11 Pro client receives its configuration from the Windows DHCP server and authenticates against the domain.
+
+<p align="center">
+  <img src="images/windows-lab-network-diagram.png" alt="Enterprise Windows Lab Network Diagram" width="900">
+</p>
 
 ### Addressing
 
