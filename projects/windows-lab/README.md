@@ -1,6 +1,6 @@
 # Windows Infrastructure Lab
 
-A virtual Windows infrastructure project built using Proxmox VE, pfSense, Windows Server 2025 and Windows 11 Pro to gain hands-on experience with Active Directory, DNS, DHCP and Windows domain administration.
+A virtual Windows infrastructure project built using Proxmox VE, pfSense, Windows Server 2025 and Windows 11 Pro to gain experience with Active Directory, DNS, DHCP and Windows domain administration.
 
 ---
 
