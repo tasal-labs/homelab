@@ -22,7 +22,7 @@ This project documents the design and deployment of an isolated Windows infrastr
 
 The aim was to build a realistic Windows environment from scratch while learning how Active Directory, DNS, DHCP and Windows networking work together in a domain environment.
 
-Rather than simply installing the services, the focus was on understanding how each component integrates with the rest of the infrastructure and troubleshooting common configuration issues throughout the deployment.
+Rather than simply installing each service, the project focused on understanding how they integrate within a Windows domain environment and troubleshooting common deployment and configuration issues.
 
 ---
 
@@ -31,7 +31,7 @@ Rather than simply installing the services, the focus was on understanding how e
 - Proxmox VE
 - pfSense
 - Windows Server 2025
-- Windows 11 Pro
+- Windows 11 Workstation
 - Active Directory Domain Services (AD DS)
 - DNS
 - DHCP
@@ -39,7 +39,7 @@ Rather than simply installing the services, the focus was on understanding how e
 
 ---
 
-## Features Implemented
+## Key Features
 
 - Virtual networking using Proxmox bridges
 - Isolated network using pfSense
@@ -135,13 +135,13 @@ The video covers:
 - Demonstration of the completed environment
 
 📺 YouTube:
-(Link)
+[(Link)](https://youtu.be/DGzVCCDEsgM?si=cAXlb2WMm489f9H_)
 
 ---
 
-## Future Improvements
+## Next Steps
 
-Planned additions include:
+Planned future projects include:
 
 - Group Policy Objects (GPOs)
 - Microsoft LAPS
