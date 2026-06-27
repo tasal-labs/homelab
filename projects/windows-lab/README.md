@@ -1,12 +1,16 @@
-# Enterprise Windows Infrastructure Lab
+# Windows Infrastructure Lab
+
+A virtual Windows infrastructure project built using Proxmox VE, pfSense, Windows Server 2025 and Windows 11 Pro to gain hands-on experience with Active Directory, DNS, DHCP and Windows domain administration.
+
+---
 
 ## Overview
 
-This project documents the process of building a Windows enterprise lab from scratch using Proxmox VE, pfSense, Windows Server and Windows 11.
+This project documents the design and deployment of an isolated Windows infrastructure lab hosted within Proxmox VE.
 
-The aim of the project was to gain practical experience with technologies commonly used in enterprise IT environments, including Active Directory, DNS, DHCP, Windows domain administration and network segmentation. The lab is fully isolated from my home network using a dedicated pfSense firewall, allowing infrastructure and security concepts to be tested without affecting production devices.
+The aim was to build a realistic Windows environment from scratch while learning how the core infrastructure components work together. The lab is isolated from the home network using a dedicated pfSense firewall, allowing services such as Active Directory, DNS and DHCP to be deployed without affecting production devices.
 
-The project covers the complete deployment of a small Windows domain, from configuring the virtual network and firewall through to deploying Active Directory, joining Windows clients to the domain, configuring DHCP and DNS, and implementing role-based access control using Active Directory security groups and SMB file shares.
+The completed environment includes a Windows Server Domain Controller, a domain-joined Windows 11 client and role-based access control using Active Directory Security Groups and SMB file shares.
 
 ---
 
@@ -25,14 +29,14 @@ The project covers the complete deployment of a small Windows domain, from confi
 
 ## Objectives
 
-* Build an isolated enterprise network within Proxmox
-* Configure virtual networking and routing using pfSense
+* Build an isolated Windows infrastructure within Proxmox
+* Configure virtual networking using pfSense
 * Deploy Windows Server as a Domain Controller
-* Configure Active Directory Domain Services
+* Configure Active Directory Domain Services (AD DS)
 * Implement DNS and DHCP
 * Join Windows 11 clients to the domain
-* Configure organisational units, users and security groups
-* Implement role-based access control using SMB file shares
+* Configure Organisational Units (OUs), users and security groups
+* Implement role-based access control (RBAC) using SMB file shares
 * Document the deployment and architecture
 
 ---
@@ -41,17 +45,21 @@ The project covers the complete deployment of a small Windows domain, from confi
 
 The lab is hosted on Proxmox VE and isolated from the home network using a dedicated pfSense virtual firewall.
 
-The pfSense WAN interface connects to the home LAN (10.27.27.0/24), while the LAN interface provides an isolated subnet (192.168.10.0/26). Windows Server acts as the Domain Controller, providing Active Directory, DNS and DHCP services, while a Windows 11 Pro client receives its configuration from the Windows DHCP server and authenticates against the domain.
+The pfSense WAN interface connects to the home LAN (10.27.27.0/24), while the LAN interface provides an isolated subnet (192.168.10.0/26).
+
+Windows Server acts as the Domain Controller, providing Active Directory, DNS and DHCP services, while the Windows 11 client receives its network configuration from the Windows DHCP server and authenticates against the domain.
 
 <p align="center">
-  <img src="images/windows-lab-network-diagram.png" alt="Enterprise Windows Lab Network Diagram" width="900">
+  <img src="images/windows-lab-network-diagram.png" alt="Windows Infrastructure Lab Network Diagram" width="900">
 </p>
 
-### Addressing
+---
+
+## Network Addressing
 
 | Device                   | Address         |
 | ------------------------ | --------------- |
-| Home Network             | 10.27.27.0/24   |
+| Home Router              | 10.27.27.1      |
 | pfSense WAN              | 10.27.27.3      |
 | pfSense LAN              | 192.168.10.1/26 |
 | Domain Controller (DC01) | 192.168.10.10   |
@@ -59,82 +67,94 @@ The pfSense WAN interface connects to the home LAN (10.27.27.0/24), while the LA
 
 ---
 
-## Active Directory
-
-A new Active Directory forest (`win.lab`) was deployed on the Windows Server Domain Controller.
-
-The environment includes:
-
-* Active Directory Domain Services
-* DNS
-* DHCP
-* Organisational Units
-* Domain Users
-* Security Groups
-* SMB File Shares
-
-Organisational Units:
-
-* Servers
-* Workstations
-* Users
-* Groups
-
----
-
-## Identity & Access Management
-
-Multiple domain users and security groups were created to simulate a small business environment.
-
-Access to shared folders is managed using Active Directory Security Groups rather than assigning permissions directly to individual users, following the principle of role-based access control (RBAC).
-
-```
-User
-  ↓
-Security Group
-  ↓
-Shared Resource
-```
-
----
-
 ## Services
-
-### Domain Controller
-
-* Active Directory
-* DNS
-* DHCP
-* SMB File Sharing
-* User and Group Management
 
 ### pfSense
 
 * Routing
 * NAT
 * Firewall
-* Internet gateway for the lab environment
+* Internet Gateway
+
+### Domain Controller (DC01)
+
+* Active Directory Domain Services
+* DNS
+* DHCP
+* SMB File Sharing
+* User & Group Management
+
+### Windows 11 Client
+
+* Domain Joined
+* DHCP Client
+* Active Directory Authentication
 
 ---
 
-## Skills Demonstrated
+## Features Implemented
 
-* Windows Server Administration
+* Virtual networking using Proxmox bridges
+* Network isolation using pfSense
+* Double NAT architecture
+* Active Directory Domain Services (AD DS)
+* Windows DNS
+* Windows DHCP Server
+* Domain-joined Windows client
+* Organisational Units (Servers, Workstations, Users and Groups)
+* User and Security Group management
+* SMB file shares
+* Role-Based Access Control (RBAC)
+
+---
+
+## Lessons Learned
+
+Throughout this project I gained practical experience with:
+
+* Building a Windows domain from scratch.
+* Understanding how Active Directory relies on integrated DNS.
+* Configuring Windows Server as a DHCP server.
+* Designing an isolated virtual network using Proxmox and pfSense.
+* Implementing role-based access control using Active Directory Security Groups.
+* Troubleshooting domain joins, DNS configuration and SMB permissions.
+* Documenting and presenting technical infrastructure through architecture diagrams and video walkthroughs.
+
+---
+
+## Project Walkthrough
+
+A complete walkthrough of the project is available on YouTube, covering:
+
+* Project overview
+* Network architecture
+* Proxmox configuration
+* pfSense configuration
+* Windows Server deployment
 * Active Directory
 * DNS & DHCP
-* Windows Domain Administration
-* Group-Based Access Control
-* Network Segmentation
-* pfSense
-* Proxmox Virtualisation
-* Enterprise Networking
-* Troubleshooting
-* Documentation
+* Domain joining
+* Organisational Units
+* Security Groups
+* SMB file shares
+* Demonstration of the completed environment
+
+📺 YouTube:
+[YouTube Link]
 
 ---
 
-## Walkthrough
+## Future Improvements
 
-This repository is accompanied by a complete video walkthrough covering the architecture, configuration and deployment of the lab from start to finish, including pfSense, Active Directory, DNS, DHCP, domain joining, security groups and file share configuration.
+Some features I'd like to explore next include:
 
+* Group Policy Objects (GPOs)
+* Windows Server Update Services (WSUS)
+* Certificate Services (AD CS)
+* Multi-Domain Controller replication
+* Microsoft Deployment Toolkit (MDT)
+* Microsoft LAPS
+* Network monitoring and logging
 
+```
+```
