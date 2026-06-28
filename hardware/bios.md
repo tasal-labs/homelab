@@ -42,3 +42,13 @@
 - Serial Port
 - HD Audio
 - RGB Controller
+
+## Operating System
+
+### Proxmox
+
+| Setting | Value |
+|---------|-------|
+| CPU Governor | powersave |
+| Scheduler | Default |
+| CPU Scaling Driver | intel_pstate |
