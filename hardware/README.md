@@ -1,5 +1,5 @@
 # Hardware
-The hardware components found in my homelab
+Details of the hardware components found in my homelab environment.
 ## Server
 
 | Component | Specification |
