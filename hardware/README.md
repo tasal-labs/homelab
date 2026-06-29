@@ -1,5 +1,5 @@
 # Hardware
-The hardware components 
+The hardware components found in my homelab
 ## Server
 
 | Component | Specification |
@@ -23,7 +23,7 @@ The hardware components
 | 1 TB NVMe | Lab and development VMs |
 | ZFS Mirror (2 × 2 TB HDD) | Persistent data, backups, Nextcloud, media |
 
-## Router
+## Router |(Topton Mini-PC)
 | Component | Specification |
 |----------|---------------|
 | CPU | Celeron N6210 (2C) |
