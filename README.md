@@ -20,7 +20,6 @@ This repo contains details of my homelab including network diagrams, services, f
 - Self-hosted applications and services
 - Network segmentation and firewall management
 ## Current Projects
-- Virtualised Windows LAN
 - Ongoing infrastructure improvements and service deployments
 ## Network Topology & Service Access Flow
 ![Network Topology & Service Access Flow](diagrams/network-and-traffic-flow-diagram.png)
