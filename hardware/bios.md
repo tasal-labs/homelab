@@ -1,5 +1,5 @@
 # BIOS Configuration
-
+ASUS BIOS configurations made for power efficiency, not performance.
 ## CPU Power Saving
 
 | Setting | Value |
