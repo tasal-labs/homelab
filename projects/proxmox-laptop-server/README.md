@@ -18,6 +18,8 @@ I'm using an old HP Pavilion Gaming 15 that had been collecting dust, so I figur
 
 One RAM slot isn't working, and I'm not great with electronics (something I want to work on). The keyboard also needs replacing, but I never got around to it. Despite these issues, the laptop is more than capable of handling the basic home services I want to run.
 
+![Proxmox running on the repurposed HP Pavilion Gaming 15](images/hardware.png)
+
 ## Proxmox Install
 
 I started by using BalenaEtcher to flash the Proxmox ISO onto a USB, changed the boot order, and booted from it. The GUI setup was pretty straightforward, so there wasn't much to it.
@@ -93,6 +95,8 @@ This lets me close the laptop lid and keep the server running, plus a lil bit le
 ## Final Thoughts
 
 Got it done in about 5–6 hours, with little bits of work in between, and turned off the old server afterwards.
+
+![Comparison of the old server and the repurposed laptop server in Proxmox](images/server-comparison.png)
 
 The main thing I realised is how useful spare hardware can be. Instead of letting this laptop collect dust, I've managed to repurpose it into something useful while freeing up my previous server for better use elsewhere.
 
